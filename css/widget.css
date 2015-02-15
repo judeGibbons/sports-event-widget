@@ -46,12 +46,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/*==== end of reset =====*/
 
-/*====  fonts =====*/
+/* ==== end of reset ==== */
 
+/* ====  fonts ==== */
 
-/* Webfont: LatoLatin-Regular */
 @font-face {
 	font-family: 'LatoLatin';
 	src: url('../fonts/LatoLatin-Regular.woff') format('woff'); 
@@ -80,12 +79,14 @@ table {
 	font-style: normal;
 }
 
+
+/* ==== main content and layout ==== */
+
 #widget {
 	background-color: #000;
 	width: 100%;
 	font-family: "LatoLatin", "Myriad Pro", sans-serif;
 }
-
 
 #widget nav {
 	z-index: 10;
@@ -96,11 +97,11 @@ table {
 	height: 41px;
 }
 
-#widget .main {
+.widget-main {
 	margin-top: 41px;
 }
 
-#widget .main:after {
+.widget-main:after {
 	z-index: -10;
 	position: fixed;
 	content: '';
@@ -108,12 +109,6 @@ table {
 	bottom: 0;
 	height: 100%;
 	width: 100%;
-}
-
-#widget nav h2 {
-	padding-left: 14px;
-	line-height: 41px;
-	font-size: 0.8125em;
 }
 
 #widget section {
@@ -128,39 +123,69 @@ table {
 	clear: both;
 }
 
-#widget .desc-title, #widget .desc-sub {
-	padding-left: 58px;
-	margin: auto 0;
-	position: relative;
-	top: 12px;
+#widget footer {
+	position: fixed;
+	bottom: 0;
+	height: 4px;
+	width: 100%;
+	clear: both;
+	z-index: 20;
 }
 
-#widget .desc-title {
-	font-size: 0.75em;
-}
 
-#widget .desc-sub {
-	font-size: 0.625em;
-	line-height: 2em
-}
+/* ==== blocks, buttons and text areas ==== */
 
-#widget h2, #widget .time-block {
-	color: #000;
-}
-
-#widget .description {
+.widget-description {
 	color: #fff;
-	background-color: #000; /*why doesn't it inherit?*/
+	background-color: #000;
 	width: 100%;
 }
 
+.widget-time-block {
+	color: #000;
+}
 
-#widget .time-block, #widget .fa-play, #widget .closedsuperscript, #widget footer {
+.widget-time-block, #widget .fa-play, .widget-closedsuperscript, #widget footer {
 	background-color: #ffd200;
 }
 
+.widget-description, .widget-time-block {
+	position: relative;
+	float: left;
+	height: 51px;
+}
 
-#widget .dates h3, #widget .stream h3 {
+.widget-description {
+	border-top: 1px solid #373737;
+}
+
+.widget-description:first-child {
+	border-top: 0;
+}
+
+.widget-time-block {
+	text-align: center;
+	line-height: 1em;
+	width: 40px;
+	left: 0;
+	opacity: 0.7;
+}
+
+.widget-stream .widget-time-block {
+	opacity: 1;
+}
+
+
+/* ==== type and headings ==== */
+
+#widget nav h2 {
+	color: #000;
+	padding-left: 14px;
+	line-height: 41px;
+	font-size: 0.8125em;
+}
+
+.widget-dates h3, .widget-stream h3 {
 	color: #fff;
 	font-size: 0.8125em;
 	line-height: 41px;
@@ -169,35 +194,30 @@ table {
 	position: relative;
 }
 
-#widget .description, #widget .time-block {
+.widget-desc-title, .widget-desc-sub {
+	padding-left: 58px;
+	margin: auto 0;
 	position: relative;
-	float: left;
-	height: 51px;
+	top: 12px;
 }
 
-#widget .description {
-	border-top: 1px solid #373737;
+.widget-desc-title {
+	font-size: 0.75em;
 }
 
-#widget .description:first-child {
-	border-top: 0;
+.widget-desc-sub {
+	font-size: 0.625em;
+	line-height: 2em
 }
 
-#widget .time-block {
-	text-align: center;
-	line-height: 1em;
-	width: 40px;
-	left: 0;
-}
-
-#widget .time-digits {
+.widget-time-digits {
 	font-family: "LatoLatinBlack", "Myriad Pro Black", sans-serif;
 	font-size: 0.615625em;
 	position: relative;
 	top: 10px;
 }
 
-#widget .time-units {
+.widget-time-units {
 	font-family: "LatoLatinLight", "Myriad Pro", sans-serif;
 	font-size: 1em;
 	text-transform: uppercase;
@@ -207,7 +227,9 @@ table {
 }
 
 
-#widget .stream-logo, #widget .team-badges {
+/* ==== icons and logos ==== */
+
+.widget-stream-logo, .widget-team-badges {
 	margin-right: 46px;
 	position: relative;
 	float: right;
@@ -215,16 +237,37 @@ table {
 	width: 92px;
 }
 
-#widget .stream-logo {
+.widget-stream-logo {
 	top: -15px;
+	text-align: center;
 }
 
-#widget .team-badges {
+.widget-team-badges {
 	top: -27px;
 }
 
-#widget .stream-logo {
-	text-align: center;
+.widget-home-badge, .widget-away-badge {
+	padding: 4px 8px 4px 7px;
+	background-color: #000;
+	height: 30px;
+	width: 23px;
+	border: 2px solid #373737;
+	border-radius: 20px;
+	position: relative;
+	display: inline-block;
+}
+
+.widget-home-badge {
+	z-index: 10;
+	left: 8px;
+}
+
+.widget-away-badge {
+	right: 8px;
+}
+
+.widget-country-flag {
+	margin-right: 4px;
 }
 
 #widget .fa-search {
@@ -257,17 +300,12 @@ table {
 	width: 25px;
 }
 
-
-#widget .dates .time-block {
-	opacity: 0.7;
-}
-
-#widget .dates .fa-play {
+.widget-dates .fa-play {
 	opacity: 0.3;
 }
 
-#widget .dates .description:hover .time-block, 
-#widget .dates .description:hover .fa-play {
+#widget .widget-description:hover .widget-time-block, 
+#widget .widget-description:hover .fa-play {
 	opacity: 1;
 }
 
@@ -286,7 +324,7 @@ table {
 	width: 14px;
 }
 
-#widget .closedsuperscript {
+.widget-closedsuperscript {
 	color: #000;
 	vertical-align: super;
 	display: inline-block;
@@ -300,39 +338,4 @@ table {
 	font-size: 0.625em;
 	line-height: 1.5em;
 	font-family: "LatoLatinBlack", "Myriad Pro Black", sans-serif;
-}
-
-#widget .country-flag {
-	margin-right: 4px;
-}
-
-#widget .home-badge, #widget .away-badge {
-	padding: 4px 8px 4px 7px;
-	background-color: #000;
-	height: 30px;
-	width: 23px;
-	border: 2px solid #373737;
-	border-radius: 20px;
-	position: relative;
-	display: inline-block;
-}
-
-#widget .home-badge {
-	z-index: 10;
-	position: relative;
-	left: 8px;
-}
-
-#widget .away-badge {
-	position: relative;
-	right: 8px;
-}
-
-#widget footer {
-	position: fixed;
-	bottom: 0;
-	height: 4px;
-	width: 100%;
-	clear: both;
-	z-index: 20;
 }
