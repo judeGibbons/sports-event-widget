@@ -1,0 +1,322 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*==== end of reset =====*/
+
+/*====  fonts =====*/
+
+
+/* Webfont: LatoLatin-Regular */
+@font-face {
+	font-family: 'LatoLatin';
+	src: url('../fonts/LatoLatin-Regular.woff') format('woff'); 
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'LatoLatinBlack';
+	src: url('../fonts/LatoLatinBlack-Regular.woff') format('woff'); 
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'LatoLatinLight';
+	src: url('../fonts/LatoLatinLight-Regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#widget {
+	background-color: #000;
+	width: 100%;
+	font-family: "LatoLatin", "Myriad Pro", sans-serif;
+}
+
+#widget nav {
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #ffd200;
+	height: 41px;
+}
+
+#widget .main {
+	margin-top: 41px;
+}
+
+#widget nav h2 {
+	padding-left: 14px;
+	line-height: 41px;
+	font-size: 0.8125em;
+}
+
+#widget section:after {
+	content: "";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+
+
+
+
+#widget .desc-title, #widget .desc-sub {
+	padding-left: 58px;
+	margin: auto 0;
+	position: relative;
+	top: 12px;
+}
+
+#widget .desc-title {
+	font-size: 0.75em;
+}
+
+#widget .desc-sub {
+	font-size: 0.625em;
+	line-height: 2em
+}
+
+#widget h2, #widget .time-block p {
+	color: #000;
+}
+
+#widget .description {
+	color: #fff;
+	background-color: #000; /*why doesn't it inherit?*/
+	width: 100%;
+}
+
+
+#widget .time-block, #widget .play-button, #widget .closed, #widget footer {
+	background-color: #ffd200;
+}
+
+
+#widget .dates h3, #widget .stream h3 {
+	color: #fff;
+	font-size: 0.8125em;
+	line-height: 41px;
+	padding-left: 14px;
+	background-color: #373737;
+	position: relative;
+}
+
+#widget .description, #widget .time-block {
+	position: relative;
+	float: left;
+	height: 51px;
+}
+
+#widget .description {
+	border-top: 1px solid #373737;
+}
+
+#widget .description:first-child {
+	border-top: 0;
+}
+
+#widget .time-block {
+	text-align: center;
+	line-height: 1em;
+	width: 40px;
+	left: 0;
+}
+
+#widget .time-digits {
+	font-family: "LatoLatinBlack", "Myriad Pro Black", sans-serif;
+	font-size: 0.615625em;
+	position: relative;
+	top: 12px;
+}
+
+#widget .time-units {
+	font-family: "LatoLatinLight", "Myriad Pro", sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+	position: relative;
+	top: 10px;
+	color: #373737;
+}
+
+
+#widget .stream-logo, #widget .team-badges {
+	margin-right: 46px;
+	position: relative;
+	float: right;
+	height: 51px;
+	width: 92px;
+}
+
+#widget .stream-logo {
+	top: -15px;
+}
+
+#widget .team-badges {
+	top: -27px;
+}
+
+#widget .stream-logo {
+	text-align: center;
+}
+
+#widget .search {
+	font-family: "FontAwesome";
+	font-size: 1.1em;
+	line-height: 2.3em;
+	color: #373737;
+	text-align: center;
+	right: 14px;
+	position: relative;
+	top: -40px;
+	float: right;
+	opacity: 0.5;
+}
+
+#widget .play-button {
+	font-family: "FontAwesome";
+	font-size: 0.9em;
+	line-height: 1.9em;
+	color: #000;
+	border-radius: 5px;
+	text-align: center;
+	right: 14px;
+	top: 12px;
+	position: absolute;
+	float: right;
+	height: 27px;
+	width: 27px;
+}
+
+
+#widget .dates .time-block {
+	opacity: 0.7;
+}
+
+#widget .dates .play-button {
+	opacity: 0.3;
+}
+
+#widget .dates .description:hover .time-block, 
+#widget .dates .description:hover .play-button {
+	opacity: 1;
+}
+
+#widget .toggle-button {
+	font-family: "FontAwesome";
+	font-size: 0.8em;
+	line-height: 1.4em;
+	color: #000;
+	background-color: #a0a0a0;
+	border-radius: 3px; /*do i need moz, webkit?*/
+	text-align: center;
+	right: 14px;
+	top: 14px; /* should be centred using 50%... */
+	position: absolute;
+	float: right;
+	height: 14px;
+	width: 14px;
+}
+
+#widget .closed {
+	color: #000;
+	vertical-align: super;
+	display: inline-block;
+	border-radius: 6px; /*do i need moz, webkit?*/
+	text-align: center;
+	position: absolute;
+	top: 6px;
+	height: 12px;
+	width: 12px;
+	margin-left: 2px;
+	font-size: 0.625em;
+	line-height: 1.5em;
+	font-family: "LatoLatinBlack", "Myriad Pro Black", sans-serif;
+}
+
+#widget .country-flag {
+	margin-right: 4px;
+}
+
+#widget .home-badge, #widget .away-badge {
+	padding: 4px 8px 4px 7px;
+	background-color: #000;
+	height: 30px;
+	width: 23px;
+	border: 2px solid #373737;
+	border-radius: 20px;
+	position: relative;
+	display: inline-block;
+}
+
+#widget .home-badge {
+	z-index: 10;
+	position: relative;
+	left: 8px;
+}
+
+#widget .away-badge {
+	position: relative;
+	right: 8px;
+}
+
+#widget footer {
+	position: fixed;
+	bottom: 0;
+	height: 4px;
+}
