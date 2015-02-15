@@ -86,6 +86,7 @@ table {
 	font-family: "LatoLatin", "Myriad Pro", sans-serif;
 }
 
+
 #widget nav {
 	z-index: 10;
 	position: fixed;
@@ -97,6 +98,16 @@ table {
 
 #widget .main {
 	margin-top: 41px;
+}
+
+#widget .main:after {
+	z-index: -10;
+	position: fixed;
+	content: '';
+	background-color: #000;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
 }
 
 #widget nav h2 {
@@ -112,9 +123,6 @@ table {
 	height: 0;
 	clear: both;
 }
-
-
-
 
 #widget .desc-title, #widget .desc-sub {
 	padding-left: 58px;
@@ -319,4 +327,7 @@ table {
 	position: fixed;
 	bottom: 0;
 	height: 4px;
+	width: 100%;
+	clear: both;
+	z-index: 20;
 }
